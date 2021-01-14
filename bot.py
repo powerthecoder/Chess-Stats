@@ -15,7 +15,7 @@ async def on_ready():
     print('-------------------------------')
     print(" ")
     print(" ")
-    await bot.change_presence(activity=discord.Game(name="chess"))
+    await client.change_presence(activity=discord.Game(name="chess"))
 
 @client.command()
 async def globalleaderboards(ctx):
