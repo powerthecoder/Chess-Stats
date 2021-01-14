@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import json
 
 client = commands.Bot(command_prefix="+")
 
@@ -23,4 +24,8 @@ async def globalleaderboards(ctx):
 async def chessrules(ctx):
     await ctx.send("https://www.chess.com/learn-how-to-play-chess")
 
-client.token("")
+with open("token.json", "r") as f:
+    data = json.load(f)
+Token = data['Token']
+f.close()
+client.token(Token)
