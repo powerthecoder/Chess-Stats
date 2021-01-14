@@ -28,4 +28,4 @@ with open("token.json", "r") as f:
     data = json.load(f)
 Token = data['Token']
 f.close()
-client.token(Token)
+client.run(Token)
